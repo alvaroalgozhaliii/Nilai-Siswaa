@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Laporan Nilai Siswa</title>
+</head>
+<body bgcolor="#ccffff">
+    <h1 style="color: rgb(255, 165, 0); text-align: center;">Laporan Nilai Siswa</h1>
+    <hr style="color: black;">
+
+    <h2 style="color: green; text-align: center;">Masukkan Data Siswa</h2>
+    <form action="raport.php" method="post">
+        <table cellpadding="10" cellspacing="0" border="0" style="margin: 0 auto; vertical-align: top;">
+            <tr>
+                <td><label for="namasiswa">Nama:</label></td>
+                <td><input type="text" id="namasiswa" name="namasiswa" required></td>
+            </tr>
+            <tr>
+                <td><label for="nisn">NISN:</label></td>
+                <td><input type="number" id="nisn" name="nisn" max="9999999999" pattern="[0-9]{1,10}" required></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+
+    <h2 style="color: green; text-align: center;">Masukkan Nilai Siswa</h2>
+    <form method="post" action="raport.php">
+        <table cellpadding="10" cellspacing="0" border="0" style="margin: 0 auto; vertical-align: top;">
+            <tr>
+                <td><label for="nilai1">B. Indonesia:</label></td>
+                <td><input type="number" id="nilai1" name="nilai1" required></td>
+            </tr>
+            <tr>
+                <td><label for="nilai2">B. Inggris:</label></td>
+                <td><input type="number" id="nilai2" name="nilai2" required></td>
+            </tr>
+            <tr>
+                <td><label for="nilai3">Matematika:</label></td>
+                <td><input type="number" id="nilai3" name="nilai3" required></td>
+            </tr>
+            <tr>
+                <td><label for="nilai4">Dasar PPLG:</label></td>
+                <td><input type="number" id="nilai4" name="nilai4" required></td>
+            </tr>
+            <tr>
+                <td><label for="nilai5">Informatika:</label></td>
+                <td><input type="number" id="nilai5" name="nilai5" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="submit" value="Hitung Rata-rata"></td>
+            </tr>
+        </table>
+    </form>
+
+    <hr>
+
+    <h2 style="color: blue; text-align: center;">Hasil Rata-rata Nilai</h2>
+    <p style="text-align: center;">Rata-rata nilai siswa adalah: <strong>{{ rata_rata }}</strong></p>
+</body>
+</html>
